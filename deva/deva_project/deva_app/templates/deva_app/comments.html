@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}forms{% endblock title %}
+{% block contents %}
+<div class="container py-5" style="background-color: #f0f0f0;">
+    <div class="row justify-content-center">
+        <div class="card border-secondary col-md-6">
+            <div class="card-header text-center" style="background-color: #ffffff;">
+                <h5 class="card-title">Form</h5>
+            </div>
+            <div class="card-body">
+                <form action="/comments" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contents %}

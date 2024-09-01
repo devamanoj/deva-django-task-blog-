@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Spotify{% endblock %}
+
+{% block contents %}
+{% load static %}
+<div class="container-fluid" style="background-color: #f0f0f0;">
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <h1 class="text-success mt-1 display-1 fw-bold">Spotify</h1>
+    </div>
+    <div class="col-6 text-end mt-3">
+      <a href="{% url "all" %}" class="btn btn-success btn-lg">ALL POSTS</a>
+      <a href="{% url "forms" %}" class="btn btn-primary btn-lg">Forms</a>
+      <a href="{% url "commentCreateView" %}" class="btn btn-info btn-lg">Comments</a>
+    </div>
+    <hr style="border: 1px solid #3e8e41;">
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="fw-bold fs-4">Spotify is a popular digital music streaming service that offers users access to millions of songs, podcasts, and other audio content from artists around the world. Launched in 2008 by Swedish entrepreneurs Daniel Ek and Martin Lorentzon, Spotify has grown to become one of the leading platforms in the music streaming industry.</p>
+    </div>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-2 align-items-center g-4 py-5">
+    <div class="col-lg-6">
+      <img src="{% static "images\imgpsh_fullsize_anim.jpg" %}" alt="" width="500px" height="500px" >
+    </div>
+    <div class="col-lg-6">
+      <p class="fw-bold fs-4">Spotify’s platform revolutionized music listening forever when we launched in 2008. Our move into podcasting brought innovation and a new generation of listeners to the medium, and in 2022 we entered the next audio market primed for growth with the addition of audiobooks.</p>
+      <p class="fw-bold fs-4">Today, more listeners than ever can discover, manage and enjoy more than 100 million tracks, 6 million podcasts titles, and 350,000 audiobooks a la carte on Spotify. We are the world’s most popular audio streaming subscription service with more than 626 million users, including 246 million subscribers in more than 180 markets.</p>
+    </div>
+    
+  </div>
+  <h1 class="text-success mt-3 display-5 fw-bold">Latest Post</h1>
+  {% include "includes/post.html" %}
+
+  <h1 class="text-success mt-3 display-5 fw-bold">About</h1>
+
+  <div class="row row-cols-1 row-cols-lg-2 align-items-center g-4 py-5">
+    <div class="col-lg-6">
+      <p class="fw-bold fs-4">Spotify’s platform revolutionized music listening forever when we launched in 2008. Our move into podcasting brought innovation and a new generation of listeners to the medium, and in 2022 we entered the next audio market primed for growth with the addition of audiobooks.</p>
+      <p class="fw-bold fs-4">Today, more listeners than ever can discover, manage and enjoy more than 100 million tracks, 6 million podcasts titles, and 350,000 audiobooks a la carte on Spotify. We are the world’s most popular audio streaming subscription service with more than 626 million users, including 246 million subscribers in more than 180 markets.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static "images\imgpsh_fullsize_anim1.jpg" %}" alt="" width="600px" height="400px" class="img-fluid rounded">
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

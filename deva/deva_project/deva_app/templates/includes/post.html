@@ -1,0 +1,22 @@
+
+
+ <div class="container" style="background-color: #f0f0f0;">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+    {% for trash in data %}
+      <div class="col mb-5 mx-2">
+        <div class="card h-100 custom-card bg-secondary text-white" style="width: 250px;">
+          {% if trash.images %}
+            <img src="{{ trash.images.url }}" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+          {% endif %}
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ trash.title_course }}</h5>
+            <h5 class="card-title">{{ trash.day }}</h5>
+            <h5 class="card-title">{{ trash.time }}</h5>
+            <p class="card-text flex-grow-1">{{ trash.describe }}</p>
+            <a href="{% url 'details-link' trash.slug %}" class="btn btn-primary mt-auto">Click</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block contents %}
+{% load static %}
+<div style="background-color: #f0f0f0;" class="d-flex justify-content-center">
+    <div class="row row-cols-1 row-cols-lg- align-items-stretch g-4 py-5">
+        <div class="card" style="width: 18rem;">
+            {% if post.images %}
+                <img src="{{ post.images.url }}" class="card-img-top" alt="...">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title_course }}</h5>
+                <h5 class="card-title">{{ post.day }}</h5>
+                <h5 class="card-title">{{ post.time }}</h5>
+                <!-- Display the description field -->
+                <p class="card-text">{{ post.describe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contents %}
